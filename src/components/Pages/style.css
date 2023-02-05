@@ -1,0 +1,8 @@
+.terms ul, .privacy ul{
+    list-style-type: unset !important;
+    padding: 1.5rem !important;
+}
+
+.headings{
+    margin-top: 50px;
+}

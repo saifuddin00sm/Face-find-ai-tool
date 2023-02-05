@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Footer } from "./components/Footer";
+import { HomePage } from "./components/Pages/HomePage";
+import { Navbar } from "./components/Navbar";
+import { Sidebar } from "./components/UI/Sidebar";
+import "./App.css";
+import "./responsive.css";
+import { ResultPage } from "./components/Pages/ResultPage";
+import { Routes, Route } from "react-router-dom";
+import { TermsOfService } from "./components/Pages/TermsOfService";
+import { PrivacyPolicy } from "./components/Pages/PrivacyPolicy";
+import { GetFacesProvider } from "./context/getFacesContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <>
+      <GetFacesProvider>
+        <Navbar />
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="searchResults" element={<ResultPage />} />
+          <Route path="terms-of-service" element={<TermsOfService />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+        <Footer />
+      </GetFacesProvider>
+      {/* Scroll top button */}
+      <span className="scrollto-top">
+        <a href="#home">
+          <i className="fas fa-angle-up"></i>
         </a>
-      </header>
-    </div>
+      </span>
+    </>
   );
 }
 
