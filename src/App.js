@@ -1,4 +1,5 @@
-// import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import { Footer } from "./components/Footer";
 import { HomePage } from "./components/Pages/HomePage";
 import { Navbar } from "./components/Navbar";
@@ -11,9 +12,16 @@ import { TermsOfService } from "./components/Pages/TermsOfService";
 import { PrivacyPolicy } from "./components/Pages/PrivacyPolicy";
 import { GetFacesProvider } from "./context/getFacesContext";
 
-// ReactGA.initialize('YOUR_TRACKING_ID');
+
+ReactGA.initialize('G-7167EM6PPJ');
 
 function App() {
+  
+useEffect(()=> {
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}, []);
+
+
   return (
     <>
       <GetFacesProvider>

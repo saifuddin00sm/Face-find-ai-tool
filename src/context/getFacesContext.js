@@ -2,6 +2,7 @@ import { useContext, createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ProgressBar } from "../components/UI/ProgressBar";
+import ReactGA from 'react-ga';
 
 const FacesContext = createContext([]);
 
@@ -56,6 +57,11 @@ export function GetFacesProvider({ children }) {
         setAllFaces(faces);
         setLoading(false);
         navigate("searchResults");
+        ReactGA.event({
+          category: 'Input',
+          action: 'Change',
+          label: inputFile
+        });
       } else {
         setLoading(false);
         navigate("searchResults");
