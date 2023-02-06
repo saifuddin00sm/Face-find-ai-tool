@@ -32,16 +32,16 @@ export function GetFacesProvider({ children }) {
   }, [loading, progress]);
 
   const getFaces = async (e) => {
-    // Clearing result page before making new search
-    setAllFaces([]);
-    setProgress(0);
     const inputFile = e.target.files[0];
+    // IF NO FILE IS SELECTED
+    if (inputFile === undefined) return;
+    // Clearing result page before making new search
+    setAllFaces({});
+    setProgress(0);
     try {
       if (error) {
         setError("");
       }
-      // IF NO FILE IS SELECTED
-      if (inputFile === undefined) return;
 
       setLoading(true);
       const formData = new FormData();

@@ -51,7 +51,7 @@ export const ImgPopup = ({ data, isOpen }) => {
         />
         <div className="url d-flex align-items-center justify-content-center mt-2 gap-2">
           <img src="images/planet.png" alt="" />
-          {pageUrl && <a style={{ fontSize: "18px" }} target='_blank' href={pageUrl}>
+          {pageUrl && <a style={{ fontSize: "18px" }} target='_blank' href={pageUrl}  rel="noreferrer">
             Open image source website
           </a> }
         </div>

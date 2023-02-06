@@ -1,3 +1,4 @@
+// import ReactGA from 'react-ga';
 import { Footer } from "./components/Footer";
 import { HomePage } from "./components/Pages/HomePage";
 import { Navbar } from "./components/Navbar";
@@ -9,6 +10,8 @@ import { Routes, Route } from "react-router-dom";
 import { TermsOfService } from "./components/Pages/TermsOfService";
 import { PrivacyPolicy } from "./components/Pages/PrivacyPolicy";
 import { GetFacesProvider } from "./context/getFacesContext";
+
+// ReactGA.initialize('YOUR_TRACKING_ID');
 
 function App() {
   return (

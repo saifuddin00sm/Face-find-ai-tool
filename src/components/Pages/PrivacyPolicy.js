@@ -19,7 +19,7 @@ export const PrivacyPolicy = () => {
         created with the help of the{" "}
         <a
           href="https://www.freeprivacypolicy.com/free-privacy-policy-generator/"
-          target="_blank"
+          target="_blank"  rel="noreferrer"
         >
           Free Privacy Policy Generator
         </a>
@@ -197,7 +197,7 @@ export const PrivacyPolicy = () => {
         close Your web browser. Learn more about cookies on the{" "}
         <a
           href="https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking"
-          target="_blank"
+          target="_blank"  rel="noreferrer"
         >
           Free Privacy Policy website
         </a>{" "}
