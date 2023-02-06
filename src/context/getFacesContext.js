@@ -60,7 +60,6 @@ export function GetFacesProvider({ children }) {
         ReactGA.event({
           category: 'Input',
           action: 'Change',
-          label: inputFile
         });
       } else {
         setLoading(false);

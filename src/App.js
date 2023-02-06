@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import ReactGA from 'react-ga';
 import { Footer } from "./components/Footer";
 import { HomePage } from "./components/Pages/HomePage";
 import { Navbar } from "./components/Navbar";
@@ -11,20 +9,13 @@ import { Routes, Route } from "react-router-dom";
 import { TermsOfService } from "./components/Pages/TermsOfService";
 import { PrivacyPolicy } from "./components/Pages/PrivacyPolicy";
 import { GetFacesProvider } from "./context/getFacesContext";
-
-
-ReactGA.initialize('G-7167EM6PPJ');
+import PageView from './components/PageView';
 
 function App() {
-  
-useEffect(()=> {
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}, []);
-
-
   return (
     <>
       <GetFacesProvider>
+        <PageView />
         <Navbar />
         <Sidebar />
         <Routes>
